@@ -23,6 +23,7 @@ Steps to run:
 - Use Postman or any HTTP request tool to do a request like this:
 	
 	POST http://localhost:5000/api/payments
+ 	```
 	{
 		"cardNumber": "1234567812345678",
 		"expiryMonth": "06",
@@ -31,8 +32,9 @@ Steps to run:
 		"amount": 700,
 		"currency": "usd"
 	}
-	
+	```
 	This is the expected result:
+	```
 	{
 		"paymentId": "__payment_id__",
 		"cardNumber": "************5678",
@@ -40,12 +42,15 @@ Steps to run:
 		"currency": "usd",
 		"status": "Success|Failure" 
 	}
-	
+	```
 	Then you can get the status in this way:
+
 	GET http://localhost:5000/api/payments/__payment_id__
 	
 	This is the expected result:
+	```
 	{
 		"paymentId": "__payment_id__",
 		"status": "Success|Failure" 
 	}
+ 	```
