@@ -54,3 +54,5 @@ Steps to run:
 		"status": "Success|Failure" 
 	}
  	```
+
+ __NOTE:__ Please consider to wait some time (~1 minute) to be sure that the environment is done and all the Docker containers are working.
