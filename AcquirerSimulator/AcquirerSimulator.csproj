@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-AcquirerSimulator-8a2ef659-2b0a-4eb0-9d2c-90327dda693b</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Confluent.Kafka" Version="2.10.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Paytently\Paytently.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+  <None Update="appsettings.json">
+    <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+  </None>
+  <None Update="appsettings.Development.json">
+    <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+  </None>
+</ItemGroup>
+</Project>
